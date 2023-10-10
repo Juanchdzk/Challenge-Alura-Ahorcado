@@ -12,7 +12,7 @@ const maxAdivinar = 6;
 const reinicioGame = () => {
     resptCorrectas = [];
     contadorRespMal = 0;
-    ahorcadoImagen.src = `imagesHangman/hangman-${contadorRespMal}.svg`;
+    ahorcadoImagen.src = `../imagesHangman/hangman-${contadorRespMal}.svg`;
     adivinaTexto.innerText = `${contadorRespMal} / ${maxAdivinar}`;
     keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
     mostrarPalabra.innerHTML = palabraActual.split("").map(() => `<li class="letter"></li>`).join("");
@@ -33,7 +33,7 @@ const getRandomWord = () => {
 const gameOver = (isVictory) => {
     setTimeout(() => {
         const modalText = isVictory ? `Adivinista la palabra` : `La palabra correcta era:`;
-        modeloGame.querySelector("img").src = `imagesHangman/${isVictory ? 'victory' : 'lost'}.gif`;
+        modeloGame.querySelector("img").src = `../imagesHangman/${isVictory ? 'victory' : 'lost'}.gif`;
         modeloGame.querySelector("h4").innerText = `${isVictory ? '¡Felicidades!' : 'Game Over!'}`;
         modeloGame.querySelector("p").innerHTML = `${modalText} <b>${palabraActual}</b>`;
         modeloGame.classList.add("show");
@@ -54,7 +54,7 @@ const initGame = (button, clickedLetter) => {
     } else {
         // Si seleccionas una letra que no existe entonces se actualizará tanto el contador como la imagen del sujeto en la horca.
         contadorRespMal++;
-        ahorcadoImagen.src = `imagesHangman/hangman-${contadorRespMal}.svg`;
+        ahorcadoImagen.src = `../imagesHangman/hangman-${contadorRespMal}.svg`;
     }
 
     button.disabled = true;
