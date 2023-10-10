@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/hangman.css">
+    <script src="script/lista-palabras.js"></script>
+    <script src="script/script.js" defer></script>
+    <title>Ahorcado</title>
+</head>
+<body>
+    <div class="principal">
+        <div class="game-modal">
+            <div class="content">
+                <img src="imagesHangman/lost.gif" alt="gif-derrota">
+                <h4>Game Over!</h4>
+                <p>La palabra correcta es: <b>rainbow</b></p>
+                <button class="play-again">Volver a jugar</button>
+            </div>
+        </div>
+        <div class="flecha-atras">
+            <a href="main.html"><img src="image/icons8-flecha-responder-100.png" alt="back arrow" width="50px"></a>
+        </div>
+        <div class="container">
+            <div class="hangman-box">
+                <img src="imagesHangman/hangman-0.svg" alt="ahorcado-img">
+                <h2>Juego del ahorcado</h2>
+            </div>
+            <div class="game-box">
+                <ul class="word-display"></ul>
+                <h4 class="hint-text">
+                    Pista:
+                    <b>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Inventore consequatur quo assumenda ab officiis voluptatem nesciunt ex atque dicta, 
+                        deserunt rerum, amet ea excepturi ut perferendis corrupti? Perferendis, quas sit!
+                    </b>
+                    
+                </h4>
+                <h4 class="guesses-text">
+                    Respuestas incorrectas:
+                    <b> 0 / 6 </b>
+                </h4>
+                <div class="keyboard">
+                <!-- 
+                    <button>a</button>
+                    <button>b</button>
+                    <button>c</button>
+                    <button>d</button>
+                    <button>e</button>
+                    <button>f</button>
+                    <button>g</button>
+                    <button>h</button>
+                    <button>i</button>
+                    <button>j</button>
+                    <button>k</button>
+                    <button>l</button>
+                    <button>m</button>
+                    <button>n</button>
+                    <button>o</button>
+                    <button>p</button>
+                    <button>q</button>
+                    <button>r</button>
+                    <button>s</button>
+                    <button>t</button>
+                    <button>u</button>
+                    <button>v</button>
+                    <button>w</button>
+                    <button>x</button>
+                    <button>y</button>
+                    <button>z</button> 
+                -->
+                </div>
+            </div>
+        </div>
+        <div class="botones-inferiores">
+            <input class="boton_inf" type="button" value="Nueva partida" onclick="getRandomWord()">
+            <input class="boton_inf" type="button" value="Desistir" onclick="gameOver(false)">
+        </div>
+    </div>
+</body>
+</html>
